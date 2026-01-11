@@ -213,7 +213,7 @@ This request supports [basic filters](#filters-basic-filters) over the following
 | id |
 | assignee | Filter by the `staff_id` of the assignee. |
 | manager | Filter by the `staff_id` of the manager. |
-| status | Filter by `status_id`. |
+| task_status | Filter by `status_id`. |
 | standing ||
 | against_type ||
 | against_id ||

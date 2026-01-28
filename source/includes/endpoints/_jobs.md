@@ -813,7 +813,7 @@ Authorization: Bearer {access_token}
 ```
 
 ```shell
-curl -X get \
+curl -X delete \
  https://{deployment}.api.accelo.com/api/v0/jobs/{job_id} \
   -H 'authorization: Bearer {access_token}'
 ```

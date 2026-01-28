@@ -354,7 +354,7 @@ returns no resources.
 > Sample Request:
 
 ```http
-DELETE /api/v0/checklists/items/{checklist_id} HTTP/1.1
+DELETE /api/v0/checklists/items/{checklist_item_id} HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```

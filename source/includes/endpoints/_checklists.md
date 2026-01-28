@@ -13,11 +13,11 @@ See the [support documentation](https://help.accelo.com/guides/user/messages-and
 
 ```json
 {
+  "id": "124",
   "against_id": "15",
   "against_type": "task",
   "created_by": "11",
-  "date_created": "1624345472",
-  "id": "124",
+  "date_created": "1624345472"
 }
 
 ```
@@ -73,10 +73,10 @@ curl -X get \
 
 This request returns a single [checklist](#the-checklist-object), identified by its `checklist_id`.
 
-#### Configuring the Response
+#### Configuring the response
 This request supports requesting additional fields and linked objects from the [checklist object](#the-checklist-object) using the [`_fields`](#configuring-the-response-fields) parameter.
 
-#### Handling the Response
+#### Handling the response
 The response will be the single [checklist object](#the-checklist-object) with its default fields and any additional fields requested through `_fields`.
 
 
@@ -104,12 +104,12 @@ curl -X get \
 
 This request returns a list of [checklists](#the-checklist-object) on the deployment.
 
-#### Configuring the Response
+#### Configuring the response
 
 ##### Pagination
 This request supports the [pagination](#configuring-the-response-pagination) parameters.
 
-#### Configuring the Response
+#### Configuring the response
 This request supports requesting additional fields and linked objects from the [checklist object](#the-checklist-object) using the [`_fields`](#configuring-the-response-fields) parameter.
 
 ##### Basic Filters
@@ -140,7 +140,7 @@ This request supports [order filters](#filters-order-filters) over the following
 ##### Searching
 This request does not support the [`_search`](#configuring-the-response-searching) parameter.
 
-#### Handling the Response
+#### Handling the response
 The response will be a list of [checklists](#the-checklist-object) with their default fields and any additional fields requested through `_fields`, and displayed according to any pagination parameters, filters, or searches used.
 
 
@@ -262,7 +262,7 @@ Content-Type: application/x-www-form-urlencoded
 ```
 
 ```shell
-curl -X get \
+curl -X post \
  https://{deployment}.api.accelo.com/api/v0/checklists \
   -H 'authorization: Bearer {access_token}' \
   -H 'Content-Type: application/x-www-form-urlencoded'
@@ -280,9 +280,9 @@ The following fields from the [checklist object](#the-checklist-object) may be s
 |:-|:-|
 | **against_id** | Must point to a valid object. |
 | **against_type** | Must point to a valid object type. Only 'task' is supported. |
-| **items** | An array of items for the checklist. Each item includes 'title' and 'ordering'
+| **items** | An array of items for the checklist. Each item includes 'title' and 'ordering'. |
 
-#### Handling the Response
+#### Handling the response
 The response will be the single, created [checklist](#the-checklist-object) with its default fields and any additional fields requested through `_fields`.
 
 
@@ -297,15 +297,15 @@ The response will be the single, created [checklist](#the-checklist-object) with
 > Sample Request:   
 
 ```http
-PUT /api/v0/checklists HTTP/1.1
+PUT /api/v0/checklists/{checklist_id} HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 ```
 
 ```shell
-curl -X get \
- https://{deployment}.api.accelo.com/api/v0/checklists \
+curl -X put \
+ https://{deployment}.api.accelo.com/api/v0/checklists/{checklist_id} \
   -H 'authorization: Bearer {access_token}' \
   -H 'Content-Type: application/x-www-form-urlencoded'
 ```
@@ -321,5 +321,5 @@ The following fields from the [checklist object](#the-checklist-object) may be u
 |:-|:-|
 | **against_id** | Must point to a valid object. |
 | **against_type** | Must point to a valid object type. Only 'task' is supported. |
-| **items** | An array of items for the checklist. Each item includes 'title' and 'ordering'
+| **items** | An array of items for the checklist. Each item includes 'title' and 'ordering'. |
 

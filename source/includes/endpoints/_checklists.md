@@ -323,3 +323,55 @@ The following fields from the [checklist object](#the-checklist-object) may be u
 | **against_type** | Must point to a valid object type. Only 'task' is supported. |
 | **items** | An array of items for the checklist. Each item includes 'title' and 'ordering'. |
 
+
+
+
+
+### Delete a Checklist
+> Sample Request:
+
+```http
+DELETE /api/v0/checklists/{checklist_id} HTTP/1.1
+HOST: {deployment}.api.accelo.com
+Authorization: Bearer {access_token}
+```
+  
+```shell
+curl -X del \
+ https://{deployment}.api.accelo.com/api/v0/checklists/{checklist_id} \
+  -H 'authorization: Bearer {access_token}' \ 
+```
+  
+`DELETE /checklists/{checklist_id}`
+  
+This request removes a checklist from the deployment, specified by its `checklist_id`. This request takes no parameters and
+returns no resources.
+
+
+
+
+### Delete a Checklist Item
+> Sample Request:
+
+```http
+DELETE /api/v0/checklists/{checklist_id} HTTP/1.1
+HOST: {deployment}.api.accelo.com
+Authorization: Bearer {access_token}
+```
+  
+```shell
+curl -X del \
+ https://{deployment}.api.accelo.com/api/v0/checklists/{checklist_item_id} \
+  -H 'authorization: Bearer {access_token}' \ 
+```
+  
+`DELETE /checklists/items/{checklist_id}`
+  
+This request removes a checklist item from the deployment, specified by its `checklist_item_id`. This request takes no parameters and
+returns no resources.
+
+
+
+
+
+

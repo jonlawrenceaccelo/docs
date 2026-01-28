@@ -46,7 +46,7 @@ Each checklist can have one or more items
 | modified_by | unsigned | The unique identifier of the staff member that last modified the checklist item. |
 | date_completed | unix ts | The date the checklist was completed. |
 | completed_by | unsigned | The unique identifier of the staff member that completed the checklist item. |
-| ordering | integer | An integer representing the checklist items's ordering within the checklist. |
+| ordering | integer | An integer representing the checklist item's ordering within the checklist. |
 | date_created | unix ts | The date the checklist was created. |
 
 
@@ -337,9 +337,9 @@ Authorization: Bearer {access_token}
 ```
   
 ```shell
-curl -X del \
+curl -X delete \
  https://{deployment}.api.accelo.com/api/v0/checklists/{checklist_id} \
-  -H 'authorization: Bearer {access_token}' \ 
+  -H 'authorization: Bearer {access_token}'
 ```
   
 `DELETE /checklists/{checklist_id}`
@@ -354,18 +354,18 @@ returns no resources.
 > Sample Request:
 
 ```http
-DELETE /api/v0/checklists/{checklist_id} HTTP/1.1
+DELETE /api/v0/checklists/items/{checklist_id} HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
   
 ```shell
-curl -X del \
- https://{deployment}.api.accelo.com/api/v0/checklists/{checklist_item_id} \
-  -H 'authorization: Bearer {access_token}' \ 
+curl -X delete \
+ https://{deployment}.api.accelo.com/api/v0/checklists/items/{checklist_item_id} \
+  -H 'authorization: Bearer {access_token}'
 ```
   
-`DELETE /checklists/items/{checklist_id}`
+`DELETE /checklists/items/{checklist_item_id}`
   
 This request removes a checklist item from the deployment, specified by its `checklist_item_id`. This request takes no parameters and
 returns no resources.

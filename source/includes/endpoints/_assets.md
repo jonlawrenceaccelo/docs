@@ -570,7 +570,7 @@ The following parameters may be sent to set the fields in the asset link:
 | **asset_id** | unsigned | Only to be sent if no `asset_id` was sent as part of the URL |
 | **linked_object_id** | unsigned | The unique identifier of the object the asset is to be linked to. |
 | **linked_object_type** | string | The type of object the asset is to be linked to. Should be one of the supported objects listed for [asset links](#the-asset-link). |
-| Description | string | |
+| description | string | |
 | end_date | unix ts | |
 | start_date | unix ts | |
 

@@ -8,6 +8,10 @@ Using the Checklist feature, these key to-dos can be easily listed, marked and t
 
 See the [support documentation](https://help.accelo.com/guides/user/messages-and-tasks/tasks/using-checklists/) for more information on checklists.
 
+
+
+
+
 ### The Checklist Object
 > Example checklist:
 
@@ -53,7 +57,6 @@ Each checklist can have one or more items
 
 
 
-
 ### Get Checklist
 > Sample Request:   
 
@@ -78,8 +81,6 @@ This request supports requesting additional fields and linked objects from the [
 
 #### Handling the response
 The response will be the single [checklist object](#the-checklist-object) with its default fields and any additional fields requested through `_fields`.
-
-
 
 
 
@@ -142,8 +143,6 @@ This request does not support the [`_search`](#configuring-the-response-searchin
 
 #### Handling the response
 The response will be a list of [checklists](#the-checklist-object) with their default fields and any additional fields requested through `_fields`, and displayed according to any pagination parameters, filters, or searches used.
-
-
 
 
 
@@ -223,6 +222,8 @@ This request returns the [checklist items](#the-checklist-item) for a given chec
 
 
 
+
+
 ### Count Checklist Items
 > Sample Request:
 
@@ -289,10 +290,6 @@ The response will be the single, created [checklist](#the-checklist-object) with
 
 
 
-
-
-
-
 ### Update a Checklist
 > Sample Request:   
 
@@ -350,6 +347,7 @@ returns no resources.
 
 
 
+
 ### Delete a Checklist Item
 > Sample Request:
 
@@ -369,9 +367,4 @@ curl -X delete \
   
 This request removes a checklist item from the deployment, specified by its `checklist_item_id`. This request takes no parameters and
 returns no resources.
-
-
-
-
-
 

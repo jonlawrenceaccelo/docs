@@ -114,7 +114,7 @@ values, for a given company. This object contains:
 
 ```http
 GET /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -150,7 +150,7 @@ parameter.
 
 ```http
 GET /api/v0/companies HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -266,7 +266,7 @@ fields requested through `_fields`, and displayed according to any pagination pa
 
 ```http
 GET /api/v0/companies/count HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -296,7 +296,7 @@ or filters this will be a count of all companies on the deployment. This request
 
 ```http
 GET /api/v0/companies/recent HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -314,7 +314,7 @@ Equivalent request:
 
 ```http
 GET /api/v0/companies/recent HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -344,7 +344,7 @@ fields requested through `_fields`, and displayed according to any pagination pa
 
 ```http
 GET /api/v0/companies/newest HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -362,7 +362,7 @@ Equivalent Request:
 
 ```http
 GET /api/v0/companies/newest HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -393,7 +393,7 @@ fields requested through `_fields`, and displayed according to any pagination pa
 
 ```http
 GET /api/v0/companies/{company_id}/status HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -429,7 +429,7 @@ The response will be a single status object with its default fields and any addi
 
 ```http
 GET /api/v0/companies/statuses HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -465,7 +465,7 @@ The response will be an array of status objects with their default fields and an
 
 ```http
 GET /api/v0/companies/statuses/{status_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -500,7 +500,7 @@ additional fields requested through `_fields`.
 
 ```http
 GET /api/v0/companies/statuses HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -570,7 +570,7 @@ This request supports the [`_search`](#configuring-the-response-searching) param
 
 ```http
 GET /api/v0/companies/statuses/count HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -600,7 +600,7 @@ With no searches or filters this will be a count of all company statuses on the 
 
 ```http
 GET /api/v0/companies/{company_id}/contact HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -638,7 +638,7 @@ The response will be a single [contact](#contact) with its default fields and an
 
 ```http
 GET /api/v0/companies/{company_id}/contacts HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -669,7 +669,7 @@ This request may be configured and handled as per [`GET /contacts`](#list-contac
 
 ```http
 GET /api/v0/companies/{company_id}/contacts/count HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -701,7 +701,7 @@ field:
 
 ```http
 GET /api/v0/companies/{company_id}/managers HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -732,7 +732,7 @@ This request may be configured and handled a per [`GET /staff`](#list-staff)
 
 ```http
 GET /api/v0/companies/{company_id}/segmentations HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -747,7 +747,7 @@ curl -X get \
 
 ```http
 GET /api/v0/companies/{company_id}/segmentations HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -795,7 +795,7 @@ This request takes no parameters and returns a list of segmentations.
 
 ```http
 PUT /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 
@@ -853,7 +853,7 @@ through `_fields`.
 
 ```http
 POST /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 
@@ -924,7 +924,7 @@ This request returns the created company object, with its default fields and any
 
 ```http
 POST /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 
@@ -969,7 +969,7 @@ This response may be configured and handled in the same way as [`GET /companies/
 
 ```http
 DELETE /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 ```
 
@@ -996,7 +996,7 @@ parameters and returns no resource.
 
 ```http
 DELETE /api/v0/companies/{company_id} HTTP/1.1
-Host: {deployment}.api.accelo.com
+HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 

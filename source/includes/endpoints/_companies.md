@@ -711,12 +711,6 @@ curl -X get \
 
 `GET /companies/{company_id}/segmentations`
 
-```http
-GET /api/v0/companies/{company_id}/segmentations HTTP/1.1
-HOST: {deployment}.api.accelo.com
-Authorization: Bearer {access_token}
-```
-
 This request returns a list of [company segmentations](#the-company-segmentation-object) for a company identified by its `company_id`.
 This request takes no parameters and returns a list of segmentations.
 
@@ -818,7 +812,7 @@ through `_fields`.
 > Sample request:  
 
 ```http
-POST /api/v0/companies/{company_id} HTTP/1.1
+POST /api/v0/companies HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
@@ -889,7 +883,7 @@ This request returns the created company object, with its default fields and any
 > Sample Request:  
 
 ```http
-POST /api/v0/companies/{company_id} HTTP/1.1
+POST /api/v0/companies/{company_id}/managers/add HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
@@ -899,7 +893,7 @@ manager_id=14
 
 ```shell
 curl -X post \
-  https://{deployment}.api.accelo.com/api/v0/companies \
+  https://{deployment}.api.accelo.com/api/v0/companies/managers/add \
   -H 'authorization: Bearer {access_token}' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'manager_id=14'

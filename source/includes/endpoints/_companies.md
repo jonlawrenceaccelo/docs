@@ -402,7 +402,7 @@ This request supports requesting additional fields and linked objects from the [
 [`_fields`](#configuring-the-response-fields) parameter.
 
 
-#### Handling The Response
+#### Handling the Response
 
 The response will be a single status object with its default fields and any additional fields requested via `_fields`.
 
@@ -425,7 +425,6 @@ curl -X get \
  https://{deployment}.api.accelo.com/api/v0/companies/statuses/{status_id} \
   -H 'authorization: Bearer {access_token}'
 ```
-
 
 `GET /companies/statuses/{status_id}`
 
@@ -541,7 +540,7 @@ With no searches or filters this will be a count of all company statuses on the 
 
 | Field | Type | Description |
 |:-|:-|:-|
-| **count** | unsigned | A count of the listed company statuses. |
+| **count** | unsigned int | A count of the listed company statuses. |
 
 
 
@@ -739,7 +738,7 @@ This request takes no parameters and returns a list of segmentations.
 
 
 ### Update a Company
-> Example request:
+> Example Request:
 
 ```http
 PUT /api/v0/companies/{company_id} HTTP/1.1
@@ -786,8 +785,7 @@ using the [`_fields`](#configuring-the-response-fields) parameter.
 
 #### Handling the Response
 
-This request returns the single updated company object, with its default fields and any additional fields requesting
-through `_fields`.
+This request returns the single updated company object, with its default fields and any additional fields requested through `_fields`.
 
 
 
@@ -797,7 +795,7 @@ through `_fields`.
 
 ### Create a Company
 
-> Sample request:  
+> Sample Request:  
 
 ```http
 POST /api/v0/companies HTTP/1.1
@@ -847,7 +845,7 @@ Values for the following fields from the [company object](#the-company-object) m
 ##### Setting Profile Field Values
 
 [Profile field values](#profiles) may be set when you create a company, for a given profile value identified by
-[`profile_value_id` you may update it through the field "profile.{`profile_value_id`}".
+`profile_value_id` you may update it through the field "profile.{`profile_value_id`}".
 
 
 #### Configuring the Response
@@ -881,7 +879,7 @@ manager_id=14
 
 ```shell
 curl -X post \
-  https://{deployment}.api.accelo.com/api/v0/companies/managers/add \
+  https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/managers/add \
   -H 'authorization: Bearer {access_token}' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'manager_id=14'
@@ -1028,7 +1026,7 @@ This is the request [`GET /{object}/profiles/fields`](#retrieve-a-list-of-profil
 This request updates and returns a [profile field value](#the-profile-value-object), specified by its `profile_value_id`
 of a particular [company](#the-company-object), identified by its `company_id`. This is the request
 [`PUT/{object}/{object_id}/profiles/values/{profile_value_id}`](#update-a-profile-value-link) where the object is
-"company", and whose id is `{company_id}`.
+"companies", and whose id is `{company_id}`.
 
 
 
@@ -1075,7 +1073,7 @@ where the object is "companies" whose id is `{company_id}`
 
 This request uses the given [progression](#progressions), specified by its `progression_id` to progress the status of a
 [company](#the-company-object), specified by its `company_id`. This is the request
-[`[PUT|POST]/{object}/{object_id}/progressions/{progression_id/auto}`](#run-a-status-update-using-a-given-progression)
+[`[PUT|POST]/{object}/{object_id}/progressions/{progression_id}/auto`](#run-a-status-update-using-a-given-progression)
 where the object is "companies" whose id is `{company_id}`.
 
 

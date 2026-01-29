@@ -312,12 +312,6 @@ Equivalent request:
 
 `GET /companies?_filters=order_by_desc(date_created)`
 
-```http
-GET /api/v0/companies/recent HTTP/1.1
-HOST: {deployment}.api.accelo.com
-Authorization: Bearer {access_token}
-```
-
 This request returns the most recently created companies on the Accelo deployment. This request is equivalent to
 requesting all companies and ordering in descending order of `date_created`.
 
@@ -359,12 +353,6 @@ curl -X get \
 Equivalent Request:
 
 `GET /companies?_filters=order_by_desc(date_modified)`
-
-```http
-GET /api/v0/companies/newest HTTP/1.1
-HOST: {deployment}.api.accelo.com
-Authorization: Bearer {access_token}
-```
 
 This request returns the most recently changed companies on the Accelo deployment. This request is equivalent to
 requesting all companies and ordering in descending order of `date_modified`.
@@ -1055,7 +1043,7 @@ of a particular [company](#the-company-object), identified by its `company_id`. 
 
 This request sets and returns a [profile value](#the-profile-value-object) for a [profile field](#the-profile-field-object), 
 specified by its `profile_field_id`, for a [company](#the-company-object), specified by its `company_id`. This
-is the request [`POST /{object}/{object_id}/profiles/fields/{profile_field_id}`](#update-a-profile-value-link) where is
+is the request [`POST /{object}/{object_id}/profiles/fields/{profile_field_id}`](#update-a-profile-value-link) where the
 object is "companies" and whose id is `{company_id}`
 
 

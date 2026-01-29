@@ -577,7 +577,7 @@ This request supports requesting additional fields and linked objects from the [
 
 #### Handling the Response 
 
-The response will be a single [contact](#contact) with its default fields and any other additional fields requested via
+The response will be a single [contact](#contacts) with its default fields and any other additional fields requested via
 `_fields`.
 
 
@@ -738,7 +738,7 @@ This request takes no parameters and returns a list of segmentations.
 
 
 ### Update a Company
-> Example Request:
+> Sample Request:
 
 ```http
 PUT /api/v0/companies/{company_id} HTTP/1.1
@@ -845,7 +845,7 @@ Values for the following fields from the [company object](#the-company-object) m
 ##### Setting Profile Field Values
 
 [Profile field values](#profiles) may be set when you create a company, for a given profile value identified by
-`profile_value_id` you may update it through the field "profile.{`profile_value_id`}".
+[`profile_value_id`](#profiles) you may update it through the field "profile.{`profile_value_id`}".
 
 
 #### Configuring the Response
@@ -856,7 +856,7 @@ using the [`_fields`](#configuring-the-response-fields) parameter.
 
 #### Handling the Response
 
-This request returns the created company object, with its default fields and any additional fields requesting through
+This request returns the created company object, with its default fields and any additional fields requested through
 `_fields`.
 
 
@@ -1041,7 +1041,7 @@ of a particular [company](#the-company-object), identified by its `company_id`. 
 
 This request sets and returns a [profile value](#the-profile-value-object) for a [profile field](#the-profile-field-object), 
 specified by its `profile_field_id`, for a [company](#the-company-object), specified by its `company_id`. This
-is the request [`POST /{object}/{object_id}/profiles/fields/{profile_field_id}`](#update-a-profile-value-link) where the
+is the request [`POST /{object}/{object_id}/profiles/fields/{profile_field_id}`](#create-a-profile-value-link) where the
 object is "companies" and whose id is `{company_id}`
 
 

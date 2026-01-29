@@ -40,8 +40,8 @@ their employees. See the [support documentation](https://help.accelo.com/guides/
 | phone | string | A contact phone number for the company. |
 | fax | string | A fax number for the company. |
 | date_created | unix ts | The date the company was created on the Accelo deployment. |
-| date_modified | unix  ts | The date the company was last modified on the Accelo deployment. |
-| date_last_interacted | unix ts | The date the company was last modified on the Accelo deployment. |
+| date_modified | unix ts | The date the company was last modified on the Accelo deployment. |
+| date_last_interacted | unix ts | The date the company was last interacted with. |
 | comments | string | Any comments or notes made against the company. |
 | standing | string | The standing of the company, from its status. |
 | status | unsigned or object | The company's [status](#statuses). |
@@ -99,9 +99,9 @@ values, for a given company. This object contains:
 | Field | Type | Description |
 |:-|:-|:-|
 | **id** | unsigned | The unique identifier for this segmentation. |
-| **title** | string | The title for this segmentation. For example "Industry" or "size"|
+| **title** | string | The title for this segmentation. For example "Industry" or "Size" |
 | **value** | string | The value(s) for this segmentation, separated by commas. For example "transport,utilities". |
-| **values** | array | An array of the values for this segmentation.|
+| **values** | array | An array of the values for this segmentation. |
 
 
 
@@ -719,7 +719,7 @@ This request returns a list of [managers](#the-manager-object) of a company spec
 
 #### Configuring the Response
 
-This request may be configured and handled a per [`GET /staff`](#list-staff)
+This request may be configured and handled as per [`GET /staff`](#list-staff)
 
 
 
@@ -806,7 +806,7 @@ _fields=comments
 ```shell
 curl -X put \
   https://{deployment}.api.accelo.com/api/v0/companies/{company_id} \
-  -H 'authorization: Bearer {acces_token}' \
+  -H 'authorization: Bearer {access_token}' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'comments=This%20is%20a%20fresh%20new%20company' \
   -d '_fields=comments'
@@ -995,12 +995,12 @@ parameters and returns no resource.
 > Sample Request:  
 
 ```http
-DELETE /api/v0/companies/{company_id} HTTP/1.1
+DELETE /api/v0/companies/{company_id}/managers/delete HTTP/1.1
 HOST: {deployment}.api.accelo.com
 Authorization: Bearer {access_token}
 Content-Type: application/x-www-form-urlencoded
 
-relationship=23
+relationship_id=23
 ```
 
 ```shell

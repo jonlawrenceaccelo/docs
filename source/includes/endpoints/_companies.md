@@ -606,7 +606,7 @@ Authorization: Bearer {access_token}
 
 ```shell
 curl -X get \
- https://{deployment}.api.accelo.com/api/v0/{company_id}/contact \
+ https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/contact \
   -H 'authorization: Bearer {access_token}'
 ```
 
@@ -645,7 +645,7 @@ Authorization: Bearer {access_token}
 
 ```shell
 curl -X get \
- https://{deployment}.api.accelo.com/api/v0/{company_id}/contacts \
+ https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/contacts \
   -H 'authorization: Bearer {access_token}'
 ```
 
@@ -676,7 +676,7 @@ Authorization: Bearer {access_token}
 
 ```shell
 curl -X get \
- https://{deployment}.api.accelo.com/api/v0/{company_id}/contacts/count \
+ https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/contacts/count \
   -H 'authorization: Bearer {access_token}'
 ```
 
@@ -708,7 +708,7 @@ Authorization: Bearer {access_token}
 
 ```shell
 curl -X get \
- https://{deployment}.api.accelo.com/api/v0/{company_id}/managers \
+ https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/managers \
   -H 'authorization: Bearer {access_token}'
 ```
 
@@ -739,7 +739,7 @@ Authorization: Bearer {access_token}
 
 ```shell
 curl -X get \
- https://{deployment}.api.accelo.com/api/v0/{company_id}/segmentations \
+ https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/segmentations \
   -H 'authorization: Bearer {access_token}'
 ```
 
@@ -1005,7 +1005,7 @@ relationship_id=23
 
 ```shell
 curl -X delete \
-  https://{deployment}.api.accelo.com/api/v0/companies \
+  https://{deployment}.api.accelo.com/api/v0/companies/{company_id}/managers/delete  \
   -H 'authorization: Bearer {access_token}' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -d 'relationship_id=23'

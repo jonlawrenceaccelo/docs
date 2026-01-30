@@ -974,7 +974,7 @@ Authorization: Bearer {access_token}
 ```
 
 ```shell
-curl -X get \
+curl -X delete \
  https://{deployment}.api.accelo.com/api/v0/companies/{company_id} \
   -H 'authorization: Bearer {access_token}'
 ```
@@ -1004,7 +1004,7 @@ relationship=23
 ```
 
 ```shell
-curl -X post \
+curl -X delete \
   https://{deployment}.api.accelo.com/api/v0/companies \
   -H 'authorization: Bearer {access_token}' \
   -H 'content-type: application/x-www-form-urlencoded' \

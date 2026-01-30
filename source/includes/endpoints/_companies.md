@@ -470,6 +470,10 @@ This request returns a list of company [statuses](#statuses) on the deployment.
 This request supports requesting additional fields and linked objects from the [status object](#statuses) using the
 [`_fields`](#configuring-the-response-fields) parameter.
 
+#### Handling The Response
+
+The response will be an array of status objects with their default fields and any additional fields requested via `_fields`.
+
 ##### Pagination
 
 This request supports the standard [pagination](#configuring-the-response-pagination) requests.
@@ -959,7 +963,7 @@ curl -X delete \
 
 `DELETE /companies/{company_id}/managers/delete`
 
-This request returns a staff member, identified via the `relationship_id` of their manager object, from the role of
+This request removes a staff member, identified via the `relationship_id` of their manager object, from the role of
 manager of a company, identified by its `company_id`. The `manager_id` is not used to identify the manager as a manager
 can have multiple relationships with the same company. Hence this request takes a single parameter:
 

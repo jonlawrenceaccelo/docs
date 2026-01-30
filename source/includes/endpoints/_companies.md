@@ -845,7 +845,7 @@ Values for the following fields from the [company object](#the-company-object) m
 ##### Setting Profile Field Values
 
 [Profile field values](#profiles) may be set when you create a company, for a given profile value identified by
-[`profile_value_id`](#profiles) you may update it through the field "profile.{`profile_value_id`}".
+\[`profile_value_id`\] you may update it through the field "profile.{`profile_value_id`}".
 
 
 #### Configuring the Response

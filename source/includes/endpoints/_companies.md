@@ -470,9 +470,6 @@ This request returns a list of company [statuses](#statuses) on the deployment.
 This request supports requesting additional fields and linked objects from the [status object](#statuses) using the
 [`_fields`](#configuring-the-response-fields) parameter.
 
-#### Handling The Response
-
-The response will be an array of status objects with their default fields and any additional fields requested via `_fields`.
 
 ##### Pagination
 
@@ -517,6 +514,9 @@ This request supports the [`_search`](#configuring-the-response-searching) param
 |:-|
 | title |
 
+#### Handling The Response
+
+The response will be an array of status objects with their default fields and any additional fields requested via `_fields`.
 
 
 

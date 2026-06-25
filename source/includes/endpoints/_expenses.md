@@ -493,7 +493,7 @@ Authorization: Bearer {access_token}
 ```
 
 ```shell
-curl -X get \
+curl -X delete \
  https://{deployment}.api.accelo.com/api/v0/expenses/{expense_id} \
   -H 'authorization: Bearer {access_token}' \
   -H 'Content-Type: application/x-www-form-urlencoded'

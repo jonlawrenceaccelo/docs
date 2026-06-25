@@ -231,7 +231,7 @@ This request supports [basic filters](#filters-basic-filters) over the following
 | id |
 | assignee | Filter by the `staff_id` of the assignee. |
 | manager | Filter by the `staff_id` of the manager. |
-| status | Filter by `status_id`. |
+| task_status | Filter by `status_id`. |
 | standing ||
 | against_type ||
 | against_id ||
@@ -557,11 +557,9 @@ The following fields from the [task object](#the-task-object) may be updated thr
 | affiliation_id |
 | manager_id |
 | priority_id |
-| type_id |
-| rate_id |
-| rate_charged |
 | date_due |
 | remaining |
+| date_started |
 
 #### Configuring the Response
 This request supports requesting additional fields and linked resources from the [task object](#the-task-object) using the [`_fields`](#configuring-the-response-fields) parameter. This request also supports [breadcrumbs](#configuring-the-response-breadcrumbs).
